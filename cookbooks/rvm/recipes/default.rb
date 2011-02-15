@@ -23,7 +23,7 @@ script "install rvm" do
     interpreter "bash"
     code <<-EOH
     bash < <( curl http://rvm.beginrescueend.com/releases/rvm-install-head )
-    echo '[[ -s '/usr/local/lib/rvm' ]] && source '/usr/local/lib/rvm'' >> ~/.profile
+    echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"' >> ~/.profile
     EOH
   not_if "rvm -v | grep 'http://rvm.beginrescueend.com/'"
 end

@@ -33,7 +33,7 @@ node[:rubies][:install].each do |ruby_name|
   script "install ruby #{ruby_name}" do
       interpreter "bash"
       code <<-EOH
-      [[ -s '/usr/local/lib/rvm' ]] && source '/usr/local/lib/rvm'
+      [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
       rvm install #{ruby_name}
       EOH
       not_if "/tmp/test_for_ruby.sh"
@@ -42,7 +42,7 @@ node[:rubies][:install].each do |ruby_name|
   script "set the default ruby (#{default_ruby}) and the permissions on the rvm directories" do
         interpreter "bash"
         code <<-EOH
-        [[ -s '/usr/local/lib/rvm' ]] && source '/usr/local/lib/rvm'
+        [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
         rvm --default #{default_ruby}        
         EOH
     end

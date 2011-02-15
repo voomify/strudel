@@ -23,4 +23,3 @@ else
   package "git"
 end
 
-package "git-email"
