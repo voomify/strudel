@@ -1,0 +1,32 @@
+{
+  "recipes": {
+  },
+  "suggestions": {
+  },
+  "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES: \n\n= USAGE:\n\n",
+  "description": "Installs/Configures rubies",
+  "conflicting": {
+  },
+  "attributes": {
+  },
+  "providing": {
+  },
+  "dependencies": {
+    "rvm": [
+
+    ]
+  },
+  "maintainer": "Voomify LLC",
+  "replacing": {
+  },
+  "platforms": {
+  },
+  "version": "0.1.0",
+  "license": "Apache 2.0",
+  "maintainer_email": "strudel@voomify.com",
+  "name": "rubies",
+  "groupings": {
+  },
+  "recommendations": {
+  }
+}

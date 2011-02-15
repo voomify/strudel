@@ -15,5 +15,7 @@ begin
   end
 rescue LoadError => e
   puts e.message
-  puts "You don't seem to have chef installed please run 'bundle install'"
+  puts "You don't seem to have chef, installing it for you"
+  system("sudo gem install chef --no-rdoc --no-ri")
+  puts "chef has been installed for you, please rerun 'rake strudel'"
 end
