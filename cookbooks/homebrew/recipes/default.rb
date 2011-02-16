@@ -1,3 +1,12 @@
+script "create /usr/local and add admin group to it" do
+  interpreter "bash"
+  code <<-EOH
+  sudo mkdir /usr/local
+  sudo chgrp admin /usr/local
+  sudo chmod 775 /usr/local
+  EOH
+end
+
 execute "install homebrew" do
   command "curl -sfL https://github.com/mxcl/homebrew/tarball/master | tar zx -m --strip 1"
   cwd "/usr/local"
