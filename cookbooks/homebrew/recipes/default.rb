@@ -5,6 +5,7 @@ script "create /usr/local and add admin group to it" do
   sudo chgrp admin /usr/local
   sudo chmod 775 /usr/local
   EOH
+  not_if "test -d /usr/local"
 end
 
 execute "install homebrew" do
