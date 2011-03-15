@@ -12,7 +12,7 @@ script "install wkhtmltopdf" do
   cwd "/tmp"
   code <<-EOH
   wget http://wkhtmltopdf.googlecode.com/files/wkhtmltopdf-OSX-0.10.0_rc2-static.tar.bz2
-  tar xvjf wkhtmltopdf-OSX-0.10.0_rc2-static.tar.bz2
+  tar -xvjf wkhtmltopdf-OSX-0.10.0_rc2-static.tar.bz2
   cp ./wkhtmltopdf /usr/local/bin
   EOH
 end
