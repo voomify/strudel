@@ -11,8 +11,8 @@ script "install wkhtmltopdf" do
   interpreter "bash"
   cwd "/tmp"
   code <<-EOH
-  wget http://wkhtmltopdf.googlecode.com/files/wkhtmltopdf-0.10.0_rc2.tar.bz2
-  tar -zxf wkhtmltopdf-0.10.0_rc2.tar.bz2
+  wget http://wkhtmltopdf.googlecode.com/files/wkhtmltopdf-OSX-0.10.0_rc2-static.tar.bz2
+  tar xvjf wkhtmltopdf-OSX-0.10.0_rc2-static.tar.bz2
   cp ./wkhtmltopdf /usr/local/bin
   EOH
 end
