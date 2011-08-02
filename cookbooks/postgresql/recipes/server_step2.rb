@@ -10,6 +10,14 @@ script "create initial postgres database" do
     not_if {File.exists?("/usr/local/var/postgres/PG_VERSION")}
 end
 
+script "automatically load postgres on login" do
+  interpreter "bash"
+  code <<-EOH
+  cp #{node[:postgresql][:dir]}/org.postgresql.postgres.plist ~/Library/LaunchAgents
+  launchctl load -w ~/Library/LaunchAgents/org.postgresql.postgres.plist
+    EOH
+end
+
 script "create the 'rails' postgres superuser role" do
   interpreter "bash"
   code <<-EOH
