@@ -16,6 +16,12 @@ What it does
 * Installs [rvm] and sets up 1.8.7 to be the default
 * Installs [rails]
 
+Prerequisites
+=============
+XCode Dev Tools  (install from your OS X DVD)
+
+If you get a message about not being able to find make.  You need to install XCode Dev Tools.
+
 Running
 =======
 
