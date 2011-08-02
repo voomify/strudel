@@ -22,8 +22,8 @@ include_recipe "git"
 script "install rvm" do
     interpreter "bash"
     code <<-EOH
-    bash < <( curl http://rvm.beginrescueend.com/releases/rvm-install-head )
-    echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"' >> ~/.profile
+    bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
+    echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function' >> ~/.bash_profile
     EOH
-  not_if "rvm -v | grep 'http://rvm.beginrescueend.com/'"
+  not_if "rvm -v | grep 'https://rvm.beginrescueend.com/'"
 end
