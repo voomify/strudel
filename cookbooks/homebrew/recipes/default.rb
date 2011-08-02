@@ -9,6 +9,7 @@ script "create /usr/local and add admin group to it" do
 end
 
 execute "install homebrew" do
+  user "root"
   command "curl -sfL https://github.com/mxcl/homebrew/tarball/master | tar zx -m --strip 1"
   cwd "/usr/local"
   not_if { File.exist? '/usr/local/bin/brew' }
