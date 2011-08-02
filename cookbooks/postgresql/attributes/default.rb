@@ -18,5 +18,5 @@
 #
 
 # OS X defaults
-default[:postgresql][:version] = "9.0.3"
+default[:postgresql][:version] = "9.0.4"
 default[:postgresql][:dir] = "/usr/local/Cellar/postgresql/#{node[:postgresql][:version]}"
