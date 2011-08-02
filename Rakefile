@@ -9,6 +9,9 @@ begin
   require 'chef'
 
   namespace :strudel do
+    task :sudo do |t, args|
+      system("chef-solo -j config/sudo_run_list.json -c config/solo.rb")
+    end
     task :install do |t, args|
       system("chef-solo -j config/run_list.json -c config/solo.rb")
     end

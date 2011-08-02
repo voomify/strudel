@@ -25,7 +25,8 @@ If you get a message about not being able to find make.  You need to install XCo
 Running
 =======
 
-    % rake strudel:install
+    % sudo rake strudel:sudo
+    % rake strudle:install
 
 [git]: http://git-scm.com/
 [rvm]: http://rvm.beginrescueend.com
