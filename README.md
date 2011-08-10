@@ -11,7 +11,7 @@ Strudel is a pastry created by a chef. A common flavor of strudel is apple.  MMM
 What it does
 ============
 * Installs [homebrew]
-* Installs [git]
+* Installs [git]  (actually homebrew does this)
 * Installs [postgresql]
 * Installs [rvm] and sets up 1.8.7 to be the default
 * Setups up optional packages - (you can edit this list. - edit config/run_list.json)
@@ -32,6 +32,8 @@ Running
 Download this project as a tarball and expand it.
 
 Edit the config/run_list.json to suite your needs.
+
+You may also want to change the rubies/attributes/default.rb file to change the version of ruby you install via rvm.
 
 ./strudel
 
