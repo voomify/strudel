@@ -30,10 +30,18 @@ node[:rubies][:install].each do |ruby_name|
     variables :ruby_name =>ruby_name
   end
 
+  script "setup bash_profile" do
+      interpreter "bash"
+      code <<-EOH
+      echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function' >> ~/.bash_profile
+      EOH
+      not_if "cat ~/.bash_profile | grep '$HOME/.rvm/scripts/rvm'"
+  end
+
   script "install ruby #{ruby_name}" do
       interpreter "bash"
       code <<-EOH
-      [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+      source ~/.bash_profile
       rvm install #{ruby_name}
       EOH
       not_if "/tmp/test_for_ruby.sh"
@@ -42,7 +50,7 @@ node[:rubies][:install].each do |ruby_name|
   script "set the default ruby (#{default_ruby}) and the permissions on the rvm directories" do
         interpreter "bash"
         code <<-EOH
-        [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+        source ~/.bash_profile
         rvm --default #{default_ruby}        
         EOH
     end

@@ -1,3 +1,4 @@
 {
-  "recipes": ["postgresql::server_step2", "rubies", "chef", "path", "image_magick", "wget", "wkhtmltopdf"]
+  "recipes": ["homebrew","postgresql", "git","rubies", "chef", "path",
+              "image_magick", "wget", "wkhtmltopdf"] # These are optional. Edit this list for your needs.
 }
