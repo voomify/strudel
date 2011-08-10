@@ -1,4 +1,3 @@
 {
-  "recipes": ["homebrew","postgresql", "git","rubies", "chef", "path",
-              "image_magick", "wget", "wkhtmltopdf"] # These are optional. Edit this list for your needs.
+  "recipes": ["homebrew","postgresql","rubies", "chef", "path","image_magick", "wget", "wkhtmltopdf"]
 }

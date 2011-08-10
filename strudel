@@ -1,0 +1,7 @@
+echo 'export PATH=/Library/Ruby/Gems/1.8/bin:$PATH' >> ~/.bash_profile
+source ~/.bash_profile
+sudo gem update --system
+sudo gem install bundler --no-ri --no-rdoc
+cd [strudel directory]
+bundle install
+chef-solo -j config/run_list.json -c config/solo.rb

@@ -19,9 +19,11 @@ What it does
 
 Prerequisites
 =============
+This was last run by me (rx) August 2011 on a Powerbook with 10.6.x installed and Dev Tools 3.1.x.
+
 Ruby and Rubygems. (This should be on your Mac already.)
 
-XCode Dev Tools  (Install from your OS X DVD)
+XCode Dev Tools - (Install from your OS X DVD)
 
 If you get a message about not being able to find make.  You need to install XCode Dev Tools.
 
@@ -29,20 +31,13 @@ Running
 =======
 Download this project as a tarball and expand it.
 
+Edit the config/run_list.json to suite your needs.
 
-echo 'export PATH=/Library/Ruby/Gems/1.8/bin:$PATH' >> ~/.bash_profile
+./strudel
 
-source ~/.bash_profile
+You then will need to setup your github:
+http://help.github.com/mac-set-up-git/
 
-sudo gem update --system
-
-sudo gem install bundler --no-ri --no-rdoc
-
-cd [strudel directory]
-
-bundle install
-
-chef-solo -j config/run_list.json -c config/solo.rb
 
 References
 ==========

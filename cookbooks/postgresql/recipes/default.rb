@@ -53,9 +53,10 @@ script "automatically load postgres on login" do
     EOH
 end
 
+#If you get an error with this run the command from your command line.
+# I have not figure out how to get around this.  OS X
 script "create the 'rails' postgres superuser role" do
   interpreter "bash"
-  user "#{`whoami`}"
   code <<-EOH
   echo "CREATE ROLE rails WITH SUPERUSER CREATEDB CREATEROLE LOGIN ENCRYPTED PASSWORD '';" | psql -d postgres
   EOH
