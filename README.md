@@ -29,11 +29,7 @@ Running
 =======
 Download this project as a tarball and expand it.
 
-gem update --system
-
-echo 'export PATH=~/.gem/ruby/1.8/bin:$PATH' >> ~/.bash_profile
-
-source ~/.bash_profile
+sudo gem update --system
 
 gem install bundler --no-ri --no-rdoc
 
