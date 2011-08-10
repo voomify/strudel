@@ -29,6 +29,8 @@ Running
 =======
 Download this project as a tarball and expand it.
 
+gem install rubygems-update
+
 gem install bundler --no-ri --no-rdoc
 
 bundle install
