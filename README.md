@@ -27,8 +27,12 @@ If you get a message about not being able to find make.  You need to install XCo
 
 Running
 =======
+Download this project as a tarball and expand it.
+
 gem install bundler --no-ri --no-rdoc
+
 bundle install
+
 chef-solo -j config/run_list.json -c config/solo.rb
 
 References
