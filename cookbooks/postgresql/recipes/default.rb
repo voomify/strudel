@@ -55,7 +55,7 @@ end
 
 script "create the 'rails' postgres superuser role" do
   interpreter "bash"
-  user "`whoami`"
+  user `whoami`
   code <<-EOH
   echo "CREATE ROLE rails WITH SUPERUSER CREATEDB CREATEROLE LOGIN ENCRYPTED PASSWORD '';" | psql -d postgres
   EOH
