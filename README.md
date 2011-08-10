@@ -31,7 +31,7 @@ Download this project as a tarball and expand it.
 
 gem install rubygems-update
 
-echo 'export $PATH=~/.gem/ruby/1.8/bin:$PATH' > ~/.bash_profile
+echo 'export PATH=~/.gem/ruby/1.8/bin:$PATH' > ~/.bash_profile
 
 source ~/.bash_profile
 
