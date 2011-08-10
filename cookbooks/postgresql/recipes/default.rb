@@ -24,6 +24,7 @@ end
 
 
 script "create /etc/sysctl.conf" do
+  interpreter "bash"
   code <<-EOH
         sudo su root -c "echo 'kern.sysv.shmall=65536' > /etc/sysctl.conf"
         sudo su root -c "echo 'kern.sysv.shmmax=16777216' >> /etc/sysctl.conf"

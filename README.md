@@ -29,7 +29,6 @@ Running
 =======
 Download this project as a tarball and expand it.
 
-cd [strudel directory]
 
 echo 'export PATH=/Library/Ruby/Gems/1.8/bin:$PATH' >> ~/.bash_profile
 
@@ -38,6 +37,8 @@ source ~/.bash_profile
 sudo gem update --system
 
 sudo gem install bundler --no-ri --no-rdoc
+
+cd [strudel directory]
 
 bundle install
 
